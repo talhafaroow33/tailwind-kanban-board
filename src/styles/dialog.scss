@@ -1,0 +1,87 @@
+// utility classes
+
+.isOpen {
+  display: block;
+}
+
+.isClosed {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.icon-btn {
+  cursor: pointer;
+}
+
+// modal styles
+
+.modal {
+  max-width: 565px;
+  padding: 60px;
+  z-index: 50;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  > * + * {
+    margin: 0.5rem 0 0 0;
+  }
+}
+
+.modal-main svg {
+  position: absolute;
+  right: 65px;
+
+  path {
+    fill: rgba(0, 0, 0, 1);
+  }
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 32px;
+}
+
+.button {
+  margin-left: auto;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: #000000bf;
+  color: #fff;
+  font-size: 14px;
+}
+
+// backdrop styles
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 40;
+  -moz-transition: opacity 0.25s ease 0s, visibility 0.35s linear;
+  -o-transition: opacity 0.25s ease 0s, visibility 0.35s linear;
+  -webkit-transition: opacity 0.25s ease, visibility 0.35s linear;
+  -webkit-transition-delay: 0s, 0s;
+  transition: opacity 0.25s ease 0s, visibility 0.35s linear;
+
+  &.state-show {
+    opacity: 0.7;
+    visibility: visible;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    -moz-transition-duration: 0.2s, 0s;
+    -o-transition-duration: 0.2s, 0s;
+    -webkit-transition-duration: 0.2s, 0s;
+    transition-duration: 0.2s, 0s;
+  }
+}
