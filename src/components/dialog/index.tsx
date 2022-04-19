@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { CloseIcon } from "../../assets/svg";
 import { dialogProps } from "../../interfaces";
-import "../../styles/dialog.css";
 
 const Dialog = ({ isOpen, setIsOpen }: dialogProps) => {
   useEffect(() => {
